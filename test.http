@@ -1,0 +1,28 @@
+###
+# @name Who Am I
+POST http://amiga1200.local:3000/api/1/who-am-i?name=Elvis Presley
+Header-field: Header-value
+Cookie: key=first;value;key2=value-2
+Content-Type: application/json
+name: John Lennon
+
+{
+	"name": "Johnny Cash"
+}
+###
+# @name SayHello
+POST http://amiga1200.local:3000/api/1/say-hello?name=Elvis Presley
+Content-Type: application/json
+
+{
+	"name": "Johnny Cash"
+}
+###
+# @name Wrong Command
+POST http://amiga1200.local:3000/api/1/auth.who-am-i-2?name=WebStorm
+
+### Wrong API
+POST http://amiga1200.local:3000/api/2/hello.message?generated-in=WebStorm
+
+### Get file
+GET http://amiga1200.local:3000/fs/comet.jpg
